@@ -188,6 +188,138 @@
             echo $char2++." ";
       }
       
+      echo "<h1 style='background-color:white'> -</h1>";
+      
+
+      // Array Ex
+
+      // 1 
+      $colorList = ['green','red','white'];
+      echo "The memory of that scene for me is like a frame of film forever frozen at that moment: the $colorList[1] carpet, the $colorList[0] lawn, the $colorList[2] house, the leaden sky. The new president and his first lady. - Richard M. Nixon";
+
+      // 2
+      echo "<ul>";
+      foreach ($colorList as $element5) {
+            echo "<li>$element5</li>";
+      }
+      echo "</ul>";
+
+
+      // 3
+
+      $cities = ["italy" => "rome", "france"=> "paris", "germany" => "berlin", "greece" => "athens"];
+      
+      foreach ($cities as $capital => $value) {
+            echo "The capital of $capital is $value <br>";
+      }
+
+      // 4
+      echo "<br>";
+      echo "<br>";
+      echo "<br>";
+      echo "<br>";
+      
+      $colors2 = ['Green','Red','White'];
+      echo $colors2[0];
+
+      // 5
+      echo "<br>";
+      echo "<br>";
+      echo "<br>";
+      
+      $numberArr = ["1","2","3","4"];
+      $addNumberArr = ["$"];
+
+      array_splice($numberArr,2, 0, $addNumberArr);
+      print_r($numberArr);
+
+      // 6
+      echo "<br>";
+      echo "<br>";
+
+      $fruits = ["d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple"];
+      asort($fruits);
+      foreach ($fruits as $key => $value) {
+            echo "<br> $key = $value";
+      }
+
+      // 7
+      echo "<br>";
+      echo "<br>";
+      
+      $temperature = array(78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62,
+      65, 64, 68, 73, 75, 79, 73);
+
+      $sum = 0;
+
+      for($i = 0; $i < count($temperature); $i++){
+            $sum = $sum + $temperature[$i];
+      }
+      $avg = $sum / count($temperature);
+      echo "<h3> $avg </h3>"; 
+      
+      // 8 
+      echo "<br>";
+      echo "<br>";
+
+      $array3 = ["color"=> "red",2,4];
+      $array4 = ["a","b","color" => "green", "shape" => "trapezoid", 4];
+      print_r( array_merge($array3, $array4));
+      
+
+      // 9
+      echo "<br>";
+      echo "<br>";
+      
+      $colors3 = ["red","blue","white","yellow"];
+      foreach ($colors3 as $elem) {
+            echo strtoupper($elem), "<br>";
+      }
+
+      // 10 
+
+      function convertLowerArray(...$arrNewOne){
+            foreach ($arrNewOne as $element) {
+                  echo strtolower($element);
+            };
+      };
+
+      convertLowerArray("RED","BLUE","WHITE","YELLOW");
+
+      // LOOP EX
+
+      //1 
+      echo "<br>";
+      echo "<br>";
+
+      $char4 = "1";
+      for ($i=0; $i < 5; $i++) { 
+            for ($j=0; $j < $i; $j++) { 
+                  echo $char4++, " ";
+            }
+            echo $char4++, "<br>";
+      }
+
+      // 2
+      $char5 = "A";
+      for($i=0;$i<=5;$i++){  
+            for($k=5;$k>=$i;$k--){  
+            echo "&nbsp";  
+            }  
+            for($j=1;$j<=$i;$j++){  
+                echo $char5++," ";  
+            }  
+            echo "<br>";  
+            }      
+                for($i=4;$i>=1;$i--){  
+                for($k=5;$k>=$i;$k--){  
+                echo "&nbsp";  
+            }  
+            for($j=1;$j<=$i;$j++){  
+            echo $char5++," ";
+            }  
+            echo "<br>";  
+        }  
       ?>
 
 
